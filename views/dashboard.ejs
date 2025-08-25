@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Dashboard</title>
+</head>
+<body>
+  <h1>Welcome, <%= userStats.name %>!</h1>
+
+  <h2>Your Stats</h2>
+  <ul>
+    <li>Games Played: <%= userStats.gamesPlayed || 0 %></li>
+    <li>Average Clicks: <%= userStats.averageClicks || 0 %></li>
+    <li>Best Score: <%= userStats.bestScore || 0 %></li>
+  </ul>
+
+  <a href="/game"><button>Play Again</button></a>
+  <a href="/leaderboard"><button>View Leaderboard</button></a>
+  <form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+  </form>
+</body>
+</html>

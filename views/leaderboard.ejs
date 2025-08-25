@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard</title>
+</head>
+<body>
+  <h1>Top 3 Players</h1>
+  <ol>
+    <% topUsers.forEach(user => { %>
+      <li><strong><%= user.name %></strong> — <%= user.bestScore %> clicks</li>
+    <% }) %>
+  </ol>
+
+  <a href="/dashboard"><button>Back to Dashboard</button></a>
+  <a href="/game"><button>Play Game</button></a>
+</body>
+</html>
